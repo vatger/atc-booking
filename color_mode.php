@@ -3,14 +3,9 @@ $avail_modes = ["dark", "bright"];
 
 $MODE = $_COOKIE["VATGER_BOOKING_MODE"];
 
-if (isset($_GET['set_darkmode'])) {
-    setcookie("VATGER_BOOKING_MODE", "dark");
-}
-
-
 foreach ($avail_modes as $mode) {
     if (isset($_GET["set_mode_$mode"])) {
-        if (setcookie("VATGER_BOOKING_MODE", $mode)) {
+        if (setcookie("VATGER_BOOKING_MODE", $mode, time()+60*60*24*30*3)) {
             $MODE = $mode;
         }
     }
