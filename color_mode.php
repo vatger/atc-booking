@@ -19,7 +19,7 @@ foreach ($avail_modes as $mode) {
 if (empty($MODE) || !in_array($MODE, $avail_modes)) $MODE = "bright";
 
 $colors_bright = [
-    "background" => [220,220,220],
+    "background" => [240, 240, 240],
     "black" => [0, 0, 0],
     "gray" => [190, 190, 190],
     "red" => [190, 40, 40],
