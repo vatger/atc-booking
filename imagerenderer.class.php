@@ -178,7 +178,7 @@ class ImageRenderer
                     if ($booking_matrix[$i][$j][$k] === null || $booking_matrix[$i][$j][$k]['content'] !== "open"){
                         $color = $color_black;
                     }
-                    if($booking_matrix[$i][$j][$k]['content'] === "open" && self::isWeeklyPosition($weeklyBookings, $day->format("N"), $booking_matrix[$i][0])){
+                    if($booking_matrix[$i][$j][$k]['content'] === "open" && self::isWeeklyPosition($weeklyBookings, $day, $booking_matrix[$i][0])){
                         $color = $color_red;
                     }
 
@@ -265,23 +265,53 @@ class ImageRenderer
 
     /**
      * @param $weeklyObject
-     * @param $day
+     * @param DateTime $day
      * @param $bookingStation
      * @return bool
      */
-    private static function isWeeklyPosition($weeklyObject, $day, $bookingStation) : bool
+    private static function isWeeklyPosition($weeklyObject, DateTime $day, $bookingStation) : bool
     {
+        $day_number = $day->format("N");
         if(!$weeklyObject) return false;
-        $isStation = false;
-        foreach($weeklyObject as $event){
-            if ($event->day === $day){
-                foreach($event->booking as $station){
-                    $len = strlen($station);
-                    $isStation = $isStation || (substr($bookingStation, 0, $len) === $station);
+
+        $check_all_bookings = function ($entry) use ($bookingStation) {
+            foreach($entry->booking as $station){
+                $len = strlen($station);
+                if(substr($bookingStation, 0, $len) == $station) return true;
+            }
+            return false;
+        };
+
+        foreach($weeklyObject as $entry) {
+            if(property_exists($entry, 'rule') && ($entry->rule != 'weekday' || empty($entry->rule))){
+                switch ($entry->rule){
+                    case 'every_X_days':
+                        //{ "rule": "every_X_days", "one_date": "2022-01-01", "days": "14", "booking": ["EDDL", "EDGG_P"] }
+                        $one_date = new DateTime($entry->one_date);
+                        $day_interval = $one_date->diff($day);
+                        if($day_interval->d % $entry->days === 0 && $check_all_bookings($entry)) return true;
+                        break;
+                    /*case 'week_X_in_month':
+                        //{ "rule": "week_X_in_month", "week_in_month": "1", "weekday": "1", "booking": ["EDDL", "EDGG_P"] }
+                        $firstDayOfMonth = new DateTime($day->format('Y-m-1'));
+                        $week_nr = ceil((intval($firstDayOfMonth->format('N')) + intval($day->format('j')) - 1) / 7);
+                        if($week_nr === $entry->week_in_month && $day_number === $entry->weekday && $check_all_bookings($entry)) return true;
+                        break;*/
+                    case 'every_X_day_in_month':
+                        //{ "rule": "every_X_day_in_month", "day_of_week": 3, "number_day_in_month": 2, "booking": ["EDDK"] }
+                        $firstDayOfMonth = new DateTime($day->format('Y-m-1'));
+                        $day_interval = $firstDayOfMonth->diff($day);
+                        if(floor($day_interval->d/7) == $entry->number_day_in_month
+                            && $entry->day_of_week == $day_number && $check_all_bookings($entry)) return true;
+                        break;
+
                 }
+            } else {
+                //{ "day": "1",  "booking": ["EDDL", "EDGG_P"] }
+                if ($entry->day === $day_number && $check_all_bookings($entry)) return true;
             }
         }
-        return $isStation;
+        return false;
     }
 
     private static function write_string($im, $font, $x, $y, $string, $color) : void
