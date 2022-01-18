@@ -1,5 +1,37 @@
-[{
-  "day": "1",
-  "booking": ["EDDL", "EDGG_P"]
-}
+[
+  {
+    "rule": "weekday",
+    "day": "1",
+    "booking": ["EDDL", "EDGG_P"]
+  },
+  {
+    "rule": "every_X_day_in_month",
+    "day_of_week": 3,
+    "number_day_in_month": 0,
+    "booking": ["EDDK"]
+  },
+  {
+    "rule": "every_X_day_in_month",
+    "day_of_week": 3,
+    "number_day_in_month": 1,
+    "booking": ["EDDL"]
+  },
+  {
+    "rule": "every_X_day_in_month",
+    "day_of_week": 3,
+    "number_day_in_month": 2,
+    "booking": ["EDDL"]
+  },
+  {
+    "rule": "every_X_day_in_month",
+    "day_of_week": 3,
+    "number_day_in_month": 3,
+    "booking": ["EDDL"]
+  },
+  {
+    "rule": "every_X_day_in_month",
+    "day_of_week": 3,
+    "number_day_in_month": 4,
+    "booking": ["EDDL"]
+  }
 ]
