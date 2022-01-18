@@ -8,30 +8,30 @@
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 0,
-    "booking": ["EDDK"]
+    "booking": ["EDDK", "EDGG_P"]
   },
   {
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 1,
-    "booking": ["EDDL"]
+    "booking": ["EDDL", "EDGG_P"]
   },
   {
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 2,
-    "booking": ["EDDL"]
+    "booking": ["EDDL", "EDGG_P"]
   },
   {
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 3,
-    "booking": ["EDDL"]
+    "booking": ["EDDL", "EDGG_P"]
   },
   {
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 4,
-    "booking": ["EDDL"]
+    "booking": ["EDDL", "EDGG_P"]
   }
 ]
