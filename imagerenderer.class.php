@@ -318,7 +318,7 @@ class ImageRenderer
     {
         putenv('GDFONTPATH=' . realpath('.'));
         if (file_exists(dirname(__FILE__) . "/MyriadProRegular.ttf")) {
-            imagettftext($im, 10, 0, $x, $y, $color, dirname(__FILE__) . "/MyriadProRegular.ttf", $string);
+            imagettftext($im, 9, 0, $x, $y + 11, $color, dirname(__FILE__) . "/MyriadProRegular.ttf", $string);
         } else {
             imagestring($im, $font, $x, $y, $string, $color);
         }
