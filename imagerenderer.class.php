@@ -153,7 +153,7 @@ class ImageRenderer
             $day->add(new DateInterval('P1D'));
         }
         $row = 2;
-        imageline($im, 0, $row * $lineHeight + 3, $imageWidth, $row * $lineHeight + 3, $color_gray);
+        imageline($im, 0, $row * $lineHeight + 7, $imageWidth, $row * $lineHeight + 7, $color_gray);
 
         $row = 3;
 
@@ -210,11 +210,11 @@ class ImageRenderer
             }
         }
         for ($i = 1; $i < 8; $i++) {
-            imageline($im, ($cell_width *$i)-10 , 0, ($cell_width *$i)-10, $lineHeight*$row, $color_gray);
+            imageline($im, ($cell_width *$i)-23 , 0, ($cell_width *$i)-23, $lineHeight*$row, $color_gray);
         }
 
 
-        self::write_string($im, 3, 5, ($lineHeight * $row) + $vertOffset, "Wanted", $color_red);
+        self::write_string($im, 3, 23, ($lineHeight * $row) + $vertOffset, "Wanted", $color_red);
         self::write_string($im, 3, $cell_width, ($lineHeight * $row) + $vertOffset, "Training", $color_blue);
         self::write_string($im, 3, $cell_width * 2 , ($lineHeight * $row) + $vertOffset, "Event", $color_orange);
 
@@ -231,7 +231,7 @@ class ImageRenderer
 
         // Draw Users
         for ($i = 0; $i < count($all_users); $i++) {
-            self::write_string($im, 3, $column * 250 + 5, $lineHeight * $row, $all_users[$i]['abbreviation'] . ": " . $all_users[$i]['name'], $color_black);
+            self::write_string($im, 3, $column * 585 + 12, $lineHeight * $row, $all_users[$i]['abbreviation'] . ": " . $all_users[$i]['name'], $color_black);
             if ($column === 2) {
                 $column = 0;
                 $row++;
@@ -243,7 +243,7 @@ class ImageRenderer
         $row += 2;
 
         $generated_time = new DateTime();
-        self::write_string($im, 2, 5, $lineHeight * $row, "Generated " . $generated_time->format("d.m.Y H:i:s"), $color_gray);
+        self::write_string($im, 2, 11, $lineHeight * $row, "Generated " . $generated_time->format("d.m.Y H:i:s"), $color_gray);
 
         $newHeight = ($row+1)*$lineHeight;
 
