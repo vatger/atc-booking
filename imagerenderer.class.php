@@ -126,7 +126,7 @@ class ImageRenderer
 
 
         $imageHeight = 5000; //temporary height
-        $imageWidth = 820;
+        $imageWidth = 1920;
 
 // Create images
         $im = @imagecreate($imageWidth, $imageHeight) or die("Cannot Initialize new GD image stream");
@@ -141,9 +141,9 @@ class ImageRenderer
 
 
         $row = 1;
-        $lineHeight = 20;
-        $vertOffset = 4;
-        $cell_width = 104;
+        $lineHeight = 47;
+        $vertOffset = 9;
+        $cell_width = 243;
 
 // Set date header columns
         $day = clone $MASTER_DATE;
@@ -318,7 +318,7 @@ class ImageRenderer
     {
         putenv('GDFONTPATH=' . realpath('.'));
         if (file_exists(dirname(__FILE__) . "/MyriadProRegular.ttf")) {
-            imagettftext($im, 9, 0, $x, $y + 11, $color, dirname(__FILE__) . "/MyriadProRegular.ttf", $string);
+            imagettftext($im, 24, 0, $x, $y + 11, $color, dirname(__FILE__) . "/MyriadProRegular.ttf", $string);
         } else {
             imagestring($im, $font, $x, $y, $string, $color);
         }
