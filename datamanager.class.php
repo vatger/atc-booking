@@ -68,7 +68,7 @@ class DataManager
      */
     private static function get_json(DateTime $date_start, int $length_days): mixed
     {
-        $fileName = _BASE_PATH_ . "cache/booking_start_" . $date_start->format("Y-m-d") . "_length_" . $length_days . ".json";
+        $fileName = _BASE_PATH_ . "cache/booking_" . $date_start->format("Y-m-d") . "json";
         if (!file_exists($fileName) || filemtime($fileName) + 60 < time()) {
             $response_json = self::do_curl_request($date_start, $length_days);
             if($response_json != false){
@@ -85,7 +85,8 @@ class DataManager
         $files = scandir(_BASE_PATH_ . "cache/");
         if(!$files) return;
         foreach ($files as $f) {
-            if (filemtime($f) + 60 * 30 < time()) unlink($f);
+            $fileName = _BASE_PATH_ . "cache/" . $f;
+            if (filemtime($fileName) + 60 * 30 < time()) unlink($fileName);
         }
     }
 
@@ -107,7 +108,7 @@ class DataManager
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
+            CURLOPT_TIMEOUT => 60,
             CURLOPT_FOLLOWLOCATION => true,
             //CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'GET',
