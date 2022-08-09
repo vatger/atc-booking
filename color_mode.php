@@ -1,7 +1,7 @@
 <?php
 $avail_modes = ["dark", "bright"];
 
-$MODE = $_COOKIE["VATGER_BOOKING_MODE"];
+$MODE = array_key_exists("VATGER_BOOKING_MODE", $_COOKIE) ? $_COOKIE["VATGER_BOOKING_MODE"] : false;
 
 foreach ($avail_modes as $mode) {
     if (isset($_GET["set_mode_$mode"])) {
