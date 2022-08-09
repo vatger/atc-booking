@@ -68,7 +68,7 @@ class DataManager
      */
     private static function get_json(DateTime $date_start, int $length_days): mixed
     {
-        $fileName = _BASE_PATH_ . "cache/booking_" . $date_start->format("Y-m-d") . "json";
+        $fileName = _BASE_PATH_ . "cache/booking_" . $date_start->format("Y-m-d") . ".json";
         if (!file_exists($fileName) || filemtime($fileName) + 60 < time()) {
             $response_json = self::do_curl_request($date_start, $length_days);
             if($response_json != false){
