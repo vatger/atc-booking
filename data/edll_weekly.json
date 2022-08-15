@@ -20,7 +20,7 @@
     "rule": "every_X_day_in_month",
     "day_of_week": 3,
     "number_day_in_month": 2,
-    "booking": ["EDDL", "EDGG_P"]
+    "booking": ["EDDK", "EDGG_P"]
   },
   {
     "rule": "every_X_day_in_month",
