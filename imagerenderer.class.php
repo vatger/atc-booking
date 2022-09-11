@@ -143,7 +143,7 @@ class ImageRenderer
         $row = 1;
         $lineHeight = 47;
         $vertOffset = 9;
-        $cell_width = 250;
+        $cell_width = 260;
 
 // Set date header columns
         $day = clone $MASTER_DATE;
