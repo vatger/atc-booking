@@ -126,7 +126,7 @@ class ImageRenderer
 
 
         $imageHeight = 5000; //temporary height
-        $imageWidth = 1920;
+        $imageWidth = 2000;
 
 // Create images
         $im = @imagecreate($imageWidth, $imageHeight) or die("Cannot Initialize new GD image stream");
@@ -143,7 +143,7 @@ class ImageRenderer
         $row = 1;
         $lineHeight = 47;
         $vertOffset = 9;
-        $cell_width = 243;
+        $cell_width = 250;
 
 // Set date header columns
         $day = clone $MASTER_DATE;
