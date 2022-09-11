@@ -126,7 +126,7 @@ class ImageRenderer
 
 
         $imageHeight = 5000; //temporary height
-        $imageWidth = 2000;
+        $imageWidth = 2080;
 
 // Create images
         $im = @imagecreate($imageWidth, $imageHeight) or die("Cannot Initialize new GD image stream");
