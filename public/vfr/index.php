@@ -9,7 +9,7 @@ if (isset($_GET['nextWeek'])) {
 }
 
 $match_function = function (string $station_ident){
-    return str_ends_with($station_ident , '_TWR');
+    return str_ends_with($station_ident , '_TWR') || str_starts_with($station_ident , 'EDXX_');
 };
 $booked_stations = DataManager::get_matched_bookings(clone $MASTER_DATE,7 , $match_function);
 
