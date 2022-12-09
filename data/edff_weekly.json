@@ -1,17 +1,42 @@
 [
   {
-    "day": "7",
+    "day": "1",
     "booking": [
-      "EDDS",
-      "EDGG_KTG"
+      "EDGG_GIN",
+      "EDDF_N_APP"
+    ]
+  },
+  {
+    "day": "2",
+    "booking": [
+      "EDGG_DKB",
+      "EDUU_WUR",
+      "EDDS_STG"
+    ]
+  },
+  {
+    "day": "3",
+    "booking": [
+      "EDGG_DKB",
+      "EDUU_WUR",
+      "EDDS_STG"
     ]
   },
   {
     "day": "5",
     "booking": [
       "EDDF",
-      "EDGG_KTG",
-      "EDUU_WUR"
+      "EDGG_GIN",
+      "EDGG_DKB",
+      "EDUU_WUR",
+      "EDDS_STG_APP"
+    ]
+  },
+  {
+    "day": "7",
+    "booking": [
+      "EDDS",
+      "EDGG_DKB"
     ]
   }
 ]
