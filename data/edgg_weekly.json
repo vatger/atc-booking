@@ -15,40 +15,16 @@
   {
     "day": "3",
     "booking": [
+      "EDGG_GIN",
       "EDGG_DKB",
       "EDUU_WUR",
       "EDDS_STG"
     ]
   },
   {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 0,
+    "rule": "weekday",
+    "day": "3",
     "booking": ["EDDK", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 1,
-    "booking": ["EDDL", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 2,
-    "booking": ["EDDK", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 3,
-    "booking": ["EDDL", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 4,
-    "booking": ["EDDL", "EDGG_PAH"]
   },
   {
     "day": "5",
