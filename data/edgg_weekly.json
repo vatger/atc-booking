@@ -1,10 +1,8 @@
 [
   {
+    "rule": "weekday",
     "day": "1",
-    "booking": [
-      "EDGG_GIN",
-      "EDDF_N_APP"
-    ]
+    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDGG_PAH","EDGG_GIN","EDDF_N_APP"]
   },
   {
     "day": "2",
@@ -17,10 +15,16 @@
   {
     "day": "3",
     "booking": [
+      "EDGG_GIN",
       "EDGG_DKB",
       "EDUU_WUR",
       "EDDS_STG"
     ]
+  },
+  {
+    "rule": "weekday",
+    "day": "3",
+    "booking": ["EDDK", "EDGG_PAH"]
   },
   {
     "day": "5",
