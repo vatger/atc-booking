@@ -101,7 +101,7 @@ class DataManager
         $date_end = $date_start->add(new DateInterval('P' . $length_days . 'D'));
         $date_end_string = $date_end->format("d.m.Y");
 
-        $url = "https://vatsim-germany.org/api/booking/atc/daterange/$date_start_string/$date_end_string";
+        $url = API_PATH . "booking/atc/daterange/$date_start_string/$date_end_string";
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
