@@ -2,36 +2,11 @@
   {
     "rule": "weekday",
     "day": "1",
-    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDGG_PAH"]
+    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDGG_PAH", "EDYY_R"]
   },
   {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 0,
-    "booking": ["EDDK", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 1,
-    "booking": ["EDDL", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 2,
-    "booking": ["EDDK", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 3,
-    "booking": ["EDDL", "EDGG_PAH"]
-  },
-  {
-    "rule": "every_X_day_in_month",
-    "day_of_week": 3,
-    "number_day_in_month": 4,
-    "booking": ["EDDL", "EDGG_PAH"]
+    "rule": "weekday",
+    "day": "3",
+    "booking": ["EDDK_DEL", "EDDK_GND", "EDDK_TWR", "EDDK_APP", "EDDK_F_APP", "EDGG_PAH"]
   }
 ]
