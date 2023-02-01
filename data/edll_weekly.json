@@ -2,7 +2,7 @@
   {
     "rule": "weekday",
     "day": "1",
-    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDGG_PAH"]
+    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDGG_PAH", "EDYY_R"]
   },
   {
     "rule": "weekday",
