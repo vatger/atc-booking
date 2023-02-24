@@ -1,5 +1,7 @@
-[{
-  "day": "4",
-  "booking": ["EDDB", "EDDH", "EDDW", "EDDV", "ETNL", "EDWW_A", "EDWW_B" "EDWW_D", "EDWW_H", "EDYY_C"]
-}
+[
+  {
+    "rule": "weekday",
+    "day": "4",
+    "booking": ["EDDB", "EDDH", "EDDW", "EDDV", "ETNL", "EDWW_A", "EDWW_M" "EDWW_D", "EDWW_H", "EDYY_C"]
+  }
 ]
