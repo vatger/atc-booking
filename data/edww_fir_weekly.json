@@ -1,0 +1,7 @@
+[
+  {
+    "rule": "weekday",
+    "day": "4",
+    "booking": ["EDDB", "EDXW", "EDDH", "EDDW", "EDDV", "ETNL", "EDWW_A", "EDWW_M" "EDWW_D", "EDWW_H", "EDYY_C"]
+  }
+]
