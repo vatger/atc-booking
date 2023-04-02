@@ -24,6 +24,6 @@ class Booking
     function create_abbreviation($name) : string
     {
         $str_arr = explode(" ", $name);
-        return substr($str_arr[0], 0, 3) . substr(end($str_arr), 0, 3);
+        return mb_substr($str_arr[0], 0, 3) . mb_substr(end($str_arr), 0, 3);
     }
 }
