@@ -9,8 +9,8 @@ if (isset($_GET['nextWeek'])) {
 }
 
 
-$stationsFile = fopen(_DATA_PATH_ . "edww_fir_allstations.csv", "r") or die("Unable to open allstations file!");
-$minStationsFile = fopen(_DATA_PATH_ . "edww_fir_minstations.csv", "r") or die("Unable to open minstations file!");
+$stationsFile = fopen(_DATA_PATH_ . "event_allstations.csv", "r") or die("Unable to open allstations file!");
+$minStationsFile = fopen(_DATA_PATH_ . "event_minstations.csv", "r") or die("Unable to open minstations file!");
 $allStationsString = fgets($stationsFile);
 $minStationsString = fgets($minStationsFile);
 
