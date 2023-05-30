@@ -1,7 +1,6 @@
 # ATC-Booking
+ This project pulls current bookings from the VATSIM Germany API and generates an image to be displayed in the Forum etc.
 
-<!-- Short description outlining the aim of the project and the functionality this project / application provides.
-An example of this can be found [here](https://github.com/vatger/teamspeak-station-bot). -->
 
 ## Contact
 
@@ -15,16 +14,11 @@ An example of this can be found [here](https://github.com/vatger/teamspeak-stati
 |  Paul H. - 1450775   |       \*        | `git[at]vatger.de` |
 
 ## Prerequisites
+- **PHP 8.x**
+  - with common php modules including gd
 
-<!-- - **Node.js** (https://nodejs.org/en) -->
 
 ## Running the Application
-
-<!-- This section should outline how the project can be executed in a local environment and should
-include any non-standard packages that are required to be installed before executing the
-application.
-
-1. Run `npm install`
-2. Run `npm run start:dev` -->
-
-<!-- ## Any other subsections that could be useful for users/developers -->
+1. Install any PHP webserver (XAMPP, Nginx + PHP FPM / CGI, Apache ...) 
+2. Copy `conf.php.example` to `conf.php` and edit its contents.
+3. Point the main directory to `/public` and start your webserver.
