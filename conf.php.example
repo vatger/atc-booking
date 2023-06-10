@@ -2,4 +2,5 @@
 define( '_BASE_PATH_', dirname( __FILE__ ) . '/' );
 define( '_DATA_PATH_', dirname( __FILE__ ) . '/data/' );
 
-define( 'API_PATH', 'https://vatsim-germany.org/api/' );
+define( 'API_PATH', 'https://vatsim-germany.org/api/' ); //with trailing slash
+define( 'API_KEY', '' );

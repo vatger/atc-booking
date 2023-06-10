@@ -121,13 +121,14 @@ class DataManager
                 'Sec-Fetch-Site: same-origin',
                 'Sec-Fetch-Dest: empty',
                 'Accept-Language: de,en;q=0.9',
-                'Accept: application/json, text/plain, */*'
+                'Accept: application/json, text/plain, */*',
+                'Authorization: Bearer ' . API_KEY
             ),
         ));
 
         $response = curl_exec($curl);
 
-        if ($response == false) throw new Exception("Unable CURL REQ");
+        if (!$response) throw new Exception("Unable CURL REQ");
         curl_close($curl);
         return $response;
     }
