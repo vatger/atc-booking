@@ -7,14 +7,6 @@
     ]
   },
   {
-    "day": "2",
-    "booking": [
-      "EDGG_DKB",
-      "EDUU_WUR",
-      "EDDS_STG"
-    ]
-  },
-  {
     "day": "3",
     "booking": [
       "EDGG_DKB",
@@ -22,16 +14,6 @@
       "EDUU_WUR",
       "EDDF_N_APP",
       "EDDS_STG"
-    ]
-  },
-  {
-    "day": "5",
-    "booking": [
-      "EDDF",
-      "EDGG_GIN",
-      "EDGG_DKB",
-      "EDUU_WUR",
-      "EDDS_STG_APP"
     ]
   },
   {
