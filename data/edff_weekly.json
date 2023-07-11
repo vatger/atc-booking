@@ -1,18 +1,6 @@
 [
   {
-    "day": "3",
-    "booking": [
-      "EDGG_DKB",
-      "EDUU_SLN",
-      "EDDF_N_APP",
-      "EDDS_STG"
-    ]
-  },
-  {
-    "day": "7",
-    "booking": [
-      "EDDS",
-      "EDGG_DKB"
-    ]
+    "day": "1",
+    "booking": []
   }
 ]

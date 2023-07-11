@@ -1,47 +1,6 @@
 [
   {
-    "rule": "weekday",
     "day": "1",
-    "booking": ["EDDL", "EDDK_APP", "EDDG_HMM_APP", "EDYY_R", "EDGG_PAH", "EDGG_GIN", "EDDF_N_APP"]
-  },
-  {
-    "day": "2",
-    "booking": [
-      "EDGG_DKB",
-      "EDUU_WUR",
-      "EDDS_STG"
-    ]
-  },
-  {
-    "day": "3",
-    "booking": [
-      "EDGG_GIN",
-      "EDGG_DKB",
-      "EDUU_WUR",
-      "EDDS_STG"
-    ]
-  },
-  {
-    "rule": "weekday",
-    "day": "3",
-    "booking": ["EDDK", "EDGG_PAH"]
-  },
-  {
-    "day": "5",
-    "booking": [
-      "EDDF",
-      "EDGG_GIN",
-      "EDGG_DKB",
-      "EDUU_WUR",
-      "EDDS_STG_APP",
-      "EDGG_PAH"
-    ]
-  },
-  {
-    "day": "7",
-    "booking": [
-      "EDDS",
-      "EDGG_DKB"
-    ]
+    "booking": []
   }
 ]
