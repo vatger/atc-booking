@@ -1,9 +1,5 @@
 [{
   "day": "1",
   "booking": ["EDDN", "EDMM_O"]
-},
-{
-  "day": "3",
-  "booking": ["EDDM", "EDMM_R", "EDMM_Z"]
 }
 ]
