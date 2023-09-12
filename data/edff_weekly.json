@@ -1,7 +1,7 @@
 [
   {
     "rule": "every_X_days",
-    "one_date": "2023-08-25",
+    "one_date": "2023-08-11",
     "days": "14",
     "booking": ["EDDF","EDGG_GIN","EDGG_DKB","EDUU_FUL","EDUU_SLN","EDDS_STG_APP"]
   },
