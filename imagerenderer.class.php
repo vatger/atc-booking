@@ -293,7 +293,7 @@ class ImageRenderer
                         $one_date = new DateTime($one_date->format('Y-m-d'));
                         $day_interval = $one_date->diff($day);
                     
-                        if(($day_interval->d % $entry->days) === 0 && $check_all_bookings($entry)) return true;
+                        if(($day_interval->days % $entry->days) === 0 && $check_all_bookings($entry)) return true;
                         break;
                     /*case 'week_X_in_month':
                         //{ "rule": "week_X_in_month", "week_in_month": "1", "weekday": "1", "booking": ["EDDL", "EDGG_P"] }
