@@ -1,6 +1,12 @@
 [
-	{
-		"day": "2",
-		"booking": ["EDDB", "EDWW_F", "EDWW_M", "EDMM_G"]
-	}
+  {
+    "rule": "every_X_days",
+    "one_date": "2023-10-05",
+    "days": "21",
+    "booking": ["EDDB", "ETNL", "EDAH", "EDWW_M"]
+  },   
+  {
+    "day": "2",
+    "booking": ["EDDB", "EDWW_F", "EDWW_M", "EDMM_G"]
+  }
 ]
