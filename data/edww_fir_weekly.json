@@ -2,7 +2,7 @@
   {
     "rule": "every_X_days",
     "one_date": "2023-10-05",
-    "days": "14",
+    "days": "21",
     "booking": ["EDDB", "EDXW", "EDDH", "EDDW", "EDDV", "ETNL", "EDAH", "EDWW_A", "EDWW_M", "EDWW_D", "EDWW_H", "EDYY_C"]
   },   
   {
