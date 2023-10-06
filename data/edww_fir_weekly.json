@@ -3,6 +3,14 @@
     "rule": "every_X_days",
     "one_date": "2023-10-05",
     "days": "14",
-    "booking": ["EDDB", "EDXW", "EDDH", "EDDW", "EDDV", "ETNL", "EDWW_A", "EDWW_M", "EDWW_D", "EDWW_H", "EDYY_C"]
+    "booking": ["EDDB", "EDXW", "EDDH", "EDDW", "EDDV", "ETNL", "EDAH", "EDWW_A", "EDWW_M", "EDWW_D", "EDWW_H", "EDYY_C"]
+  },   
+  {
+  "day": "4",
+  "booking": ["EDDH", "EDWW_A", "EDWW_D", "EDWW_H", "EDYY_C"]
+  },
+  {
+    "day": "7",
+    "booking": ["EDDV", "EDWW_A", "EDWW_D"]
   }
 ]
