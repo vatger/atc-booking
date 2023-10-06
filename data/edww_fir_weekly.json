@@ -6,8 +6,8 @@
     "booking": ["EDDB", "EDXW", "EDDH", "EDDW", "EDDV", "ETNL", "EDAH", "EDWW_A", "EDWW_M", "EDWW_D", "EDWW_H", "EDYY_C"]
   },   
   {
-  "day": "4",
-  "booking": ["EDDH", "EDWW_A", "EDWW_D", "EDWW_H", "EDYY_C"]
+    "day": "4",
+    "booking": ["EDDH", "EDWW_A", "EDWW_D", "EDWW_H", "EDYY_C"]
   },
   {
     "day": "7",
