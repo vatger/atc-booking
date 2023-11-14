@@ -96,12 +96,12 @@ class DataManager
     private static function do_curl_request(DateTime $date_start, int $length_days): bool|string
     {
         $curl = curl_init();
-        $date_start_string = $date_start->format("d.m.Y");
+        $date_start_string = $date_start->format("Y-m-d");
 
         $date_end = $date_start->add(new DateInterval('P' . $length_days . 'D'));
-        $date_end_string = $date_end->format("d.m.Y");
+        $date_end_string = $date_end->format("Y-m-d");
 
-        $url = API_PATH . "booking/atc/daterange/$date_start_string/$date_end_string";
+        $url = API_PATH . "booking/$date_start_string/$date_end_string";
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -122,7 +122,7 @@ class DataManager
                 'Sec-Fetch-Dest: empty',
                 'Accept-Language: de,en;q=0.9',
                 'Accept: application/json, text/plain, */*',
-                'Authorization: Bearer ' . API_KEY
+                'Authorization: Token ' . API_KEY
             ),
         ));
 
