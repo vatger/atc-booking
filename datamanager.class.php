@@ -40,7 +40,7 @@ class DataManager
                 $station_ident = $booking->station->ident;
                 if($match_function($station_ident)){
                     $requested_bookings[] = new Booking(
-                        "{$booking->controller->firstname} {$booking->controller->lastname}",
+                        $booking->controller->username_short,
                         $booking->starts_at,
                         $booking->ends_at,
                         $station_ident,
