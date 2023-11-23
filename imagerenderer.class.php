@@ -69,7 +69,7 @@ class ImageRenderer
                     $booking_date_end = DateTime::createFromFormat('Y-m-d\TH:i:s', $booked_stations[$k]->time_end);
                     // append all bookings as array
                     if ($booking_date_start->format("Y-m-d") === $day->format("Y-m-d") && $main_stations[$i] == $booked_stations[$k]->callsign) {
-                        $cellContent = $booked_stations[$k]->abbreviation . " " . $booking_date_start->format("H") . "-" . $booking_date_end->format("H");
+                        $cellContent = $booked_stations[$k]->abbreviation . " " . $booking_date_start->format("Hi") . "-" . $booking_date_end->format("Hi");
                         $isTraining = $booked_stations[$k]->training;
                         $isEvent = $booked_stations[$k]->event;
                         $cellObject[] = ["content" => $cellContent, "isTraining" => $isTraining, "isEvent" => $isEvent];
