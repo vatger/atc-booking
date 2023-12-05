@@ -1,17 +1,10 @@
 <?php
 $avail_modes = ["dark", "bright"];
 
-$MODE = array_key_exists("VATGER_BOOKING_MODE", $_COOKIE) ? $_COOKIE["VATGER_BOOKING_MODE"] : false;
-
-foreach ($avail_modes as $mode) {
-    if (isset($_GET["set_mode_$mode"])) {
-        if (setcookie("VATGER_BOOKING_MODE", $mode, time()+60*60*24*30*3)) {
-            $MODE = $mode;
-        }
-    }
+$MODE = "bright";
+if (isset($_GET["theme"]) && $_GET["theme"] == "dark") {
+	    $MODE = "dark";
 }
-
-if (empty($MODE) || !in_array($MODE, $avail_modes)) $MODE = "bright";
 
 $colors_bright = [
     "background" => [240, 240, 240],
