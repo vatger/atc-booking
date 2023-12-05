@@ -3,7 +3,11 @@ $avail_modes = ["dark", "bright"];
 
 $MODE = "bright";
 if (isset($_GET["theme"]) && $_GET["theme"] == "dark") {
+<<<<<<< HEAD
 	    $MODE = "dark";
+=======
+    $MODE = "dark";
+>>>>>>> d86167d23b2d672c42a84d8c7283c47292df9b2c
 }
 
 $colors_bright = [
