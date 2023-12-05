@@ -1,6 +1,7 @@
 <?php
 require_once ("../../conf.php");
 require_once(_BASE_PATH_ . "datamanager.class.php");
+require_once(_BASE_PATH_ . "datahub.class.php");
 require_once(_BASE_PATH_ . "imagerenderer.class.php");
 
 $MASTER_DATE = new DateTime();
