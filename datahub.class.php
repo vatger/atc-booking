@@ -1,4 +1,5 @@
 <?php
+include_once("conf.php");
 
 class Datahub
 {

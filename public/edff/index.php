@@ -9,10 +9,12 @@ if (isset($_GET['nextWeek'])) {
     $MASTER_DATE->add(new DateInterval('P7D'));
 }
 
-$weeklyBookings = Datahub::get_weekly_data('edff');
+$key = 'edff';
 
-$min_stations = Datahub::get_stations_data('edff', true);
-$main_stations = Datahub::get_stations_data('edff', false);
+$weeklyBookings = Datahub::get_weekly_data($key);
+
+$min_stations = Datahub::get_stations_data($key, true);
+$main_stations = Datahub::get_stations_data($key, false);
 
 
 $booked_stations = DataManager::get_matched_station_array_bookings(clone $MASTER_DATE, 7, $main_stations);
