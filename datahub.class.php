@@ -3,20 +3,44 @@
 class Datahub
 {
 
-    private static function get_json()
+    public static function get_weekly_data(string $key): array
     {
-        /*
-        $fileName = _BASE_PATH_ . "cache/booking_" . ".json";
+        $key = strtolower($key);
+        $url = "https://raw.githubusercontent.com/VATGER-Nav/datahub/main/event_schedules/$key.json";
+        $data = self::get_json($url, "datahub-event_schedules-$key.json");
+        return $data;
+    }
+
+    public static function get_stations_data(string $key, bool $min_station_only): array
+    {
+        $url = 'https://github.com/VATGER-Nav/datahub/blob/main/legacy/schedule.json';
+        $data = self::get_json($url, 'datahub-legacy-schedule.json');
+        $result = [];
+        foreach ($data as $element) {
+            if (strtoupper($element->name) == strtoupper($key)) {
+                if ($min_station_only) {
+                    $result = $element->schedule_minstation;
+                } else {
+                    $result = array_merge($element->schedule_group, $element->schedule_minstation);
+                }
+                return $result;
+            }
+        }
+        return $result;
+    }
+
+
+    private static function get_json(string $url, string $fileName): object|array
+    {
+        $fileName = _BASE_PATH_ . "cache/datahub_" . $fileName . ".json";
         if (!file_exists($fileName) || filemtime($fileName) + 60 < time()) {
-            $response_json = self::do_curl_request();
+            $response_json = self::do_curl_request($url);
             if ($response_json != false) {
                 file_put_contents($fileName, $response_json);
-                //self::cleanup_cache();
             }
         }
         $file_content = file_get_contents($fileName);
         return json_decode($file_content);
-        */
     }
 
     /**
@@ -49,5 +73,6 @@ class Datahub
         curl_close($curl);
         return $response;
     }
+
 
 }
