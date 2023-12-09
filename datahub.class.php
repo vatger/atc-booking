@@ -14,7 +14,7 @@ class Datahub
 
     public static function get_stations_data(string $key, bool $min_station_only): array
     {
-        $url = 'https://github.com/VATGER-Nav/datahub/blob/main/legacy/schedule.json';
+        $url = 'https://raw.githubusercontent.com/VATGER-Nav/datahub/main/legacy/schedule.json';
         $data = self::get_json($url, 'datahub-legacy-schedule.json');
         $result = [];
         foreach ($data as $element) {
