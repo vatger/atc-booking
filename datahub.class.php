@@ -40,8 +40,17 @@ class Datahub
             $prefixB = substr($b, 0, 4);
             return strcmp($prefixA, $prefixB);
         };
+        $suffix_sort2 = function ($a, $b): int {
+            $suffixA = substr($a, -1 * 3);
+            $suffixB = substr($b, -1 * 3);
+            $indexA = $suffixA == 'CTR' ? 0 : 1;
+            $indexB = $suffixB == 'CTR' ? 0 : 1;
+            return $indexA - $indexB;
+        };
+
         usort($result, $suffix_sort);
         usort($result, $prefix_sort);
+        usort($result, $suffix_sort2);
         return $result;
     }
 
