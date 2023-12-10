@@ -24,10 +24,10 @@ class Datahub
                 } else {
                     $result = array_merge($element->schedule_group, $element->schedule_minstation);
                 }
-                return $result;
+                break;
             }
         }
-        $suffix_sort = function ($a, $b) {
+        $suffix_sort = function ($a, $b): int {
             $order = ['CTR', 'APP', 'DEP', 'TWR', 'GND', 'DEL'];
             $suffixA = substr($a, -1 * 3);
             $suffixB = substr($b, -1 * 3);
@@ -35,7 +35,7 @@ class Datahub
             $indexB = array_search($suffixB, $order);
             return $indexA - $indexB;
         };
-        $prefix_sort = function ($a, $b) {
+        $prefix_sort = function ($a, $b): int {
             $prefixA = substr($a, 0, 4);
             $prefixB = substr($b, 0, 4);
             return strcmp($prefixA, $prefixB);
