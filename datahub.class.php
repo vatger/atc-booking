@@ -27,6 +27,21 @@ class Datahub
                 return $result;
             }
         }
+        $suffix_sort = function ($a, $b) {
+            $order = ['CTR', 'APP', 'DEP', 'TWR', 'GND', 'DEL'];
+            $suffixA = substr($a, -1 * 3);
+            $suffixB = substr($b, -1 * 3);
+            $indexA = array_search($suffixA, $order);
+            $indexB = array_search($suffixB, $order);
+            return $indexA - $indexB;
+        };
+        $prefix_sort = function ($a, $b) {
+            $prefixA = substr($a, 0, -3);
+            $prefixB = substr($b, 0, -3);
+            return strcmp($prefixA, $prefixB);
+        };
+        usort($result, $suffix_sort);
+        usort($result, $prefix_sort);
         return $result;
     }
 
