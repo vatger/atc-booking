@@ -36,8 +36,8 @@ class Datahub
             return $indexA - $indexB;
         };
         $prefix_sort = function ($a, $b) {
-            $prefixA = substr($a, 0, -3);
-            $prefixB = substr($b, 0, -3);
+            $prefixA = substr($a, 0, 4);
+            $prefixB = substr($b, 0, 4);
             return strcmp($prefixA, $prefixB);
         };
         usort($result, $suffix_sort);
