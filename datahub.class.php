@@ -8,7 +8,7 @@ class Datahub
     {
         $key = strtolower($key);
         $url = "https://raw.githubusercontent.com/VATGER-Nav/datahub/main/event_schedules/$key.json";
-        $data = self::get_json($url, "datahub-event_schedules-$key.json") ?? [];
+        $data = self::get_json($url, "datahub-event_schedules-$key.json");
         return $data;
     }
 
