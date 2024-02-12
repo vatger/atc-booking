@@ -129,6 +129,7 @@ class DataManager
         if (!$files) return;
         foreach ($files as $f) {
             $fileName = _BASE_PATH_ . "cache/" . $f;
+            if (is_dir($fileName)) continue;
             if (filemtime($fileName) + 60 * 30 < time()) unlink($fileName);
         }
     }
