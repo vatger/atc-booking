@@ -21,9 +21,9 @@ class Datahub
         foreach ($data as $element) {
             if (strtoupper($element->name) == strtoupper($key)) {
                 if ($min_station_only) {
-                    $result = $element->schedule_minstation;
+                    $result = $element->schedule_show_always;
                 } else {
-                    $result = array_merge($element->schedule_group, $element->schedule_minstation);
+                    $result = array_merge($element->schedule_show_booked, $element->schedule_show_always);
                 }
                 break;
             }
@@ -61,7 +61,7 @@ class Datahub
         $fileName = _BASE_PATH_ . "cache/datahub_" . $fileName . ".json";
         if (!file_exists($fileName) || filemtime($fileName) + 60 * 5 < time()) {
             $response_json = self::do_curl_request($url);
-            if ($response_json != false) {
+            if ($response_json) {
                 file_put_contents($fileName, $response_json);
             }
         }
