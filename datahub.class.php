@@ -7,7 +7,7 @@ class Datahub
     public static function get_weekly_data(string $key): array
     {
         $key = strtolower($key);
-        $url = "https://raw.githubusercontent.com/VATGER-Nav/datahub/main/event_schedules/$key.json";
+        $url = "https://raw.githubusercontent.com/VATGER-Nav/datahub/main/data/event_schedules/$key.json";
         $data = self::get_json($url, "datahub-event_schedules-$key.json");
         return is_array($data) ? $data : [];
     }
